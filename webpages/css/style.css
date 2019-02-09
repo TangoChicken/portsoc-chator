@@ -8,10 +8,11 @@
   --hi: rgba(255,244,0,0.25);
   --althi: rgba(224,173,0,0.25);
   --clear: rgba(0,0,0,0);
-  --fg: rgba(0,0,0,1);
-  --bg: #FFF;
-  --bgalt: #DEF;
-  --body: #FFF;
+  --fg: #dcddde;
+  --bg: #2f3136;
+  --bgalt: #2b2c31;
+  --input: #484c52;
+  --body: #202225;
 }
 
 * {
@@ -29,9 +30,12 @@ body {
   width: 100vw;
   padding: .5rem ;
   font-size: 130%;
-  background: var(--body);
+  background: var(--input);
   color: var(--fg);
   caret-color: var(--hi);
+  border: none;
+  border-radius: .5rem;
+  margin: .3rem;
 }
 
 body:not(.logged-in) #newmsg {
@@ -44,11 +48,13 @@ body:not(.logged-in) #newmsg {
 }
 
 #messages > li {
+  display: flex;
   max-height: var(--height);
   padding: var(--pad);
   list-style: none;
   overflow: hidden;
   background: var(--bg);
+  word-break: break-word;
 }
 
 #messages > li.update {
@@ -102,6 +108,7 @@ img.avatar {
   max-height: 2rem;
   max-width: 2rem;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
 
